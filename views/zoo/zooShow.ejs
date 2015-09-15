@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+ <div class = 'zoos'>
+    Zoo Name: <br/>
+    <%= zoo.name %>
+    <br/>
+    Zoo Location: <br/>
+    <%= zoo.location %>
+    <br/>
+    Zoo Animals:
+    <%= zoo.animals %>
+    <br/>
+    <br/>
+    <button class = 'editZoo' data-url = "/zoos/<%= zoo.id %>/edit" >Edit Zoo</button>
+    <br/>
+    <button id = 'deleteButton' data-url = '/zoos/<%=zoo.id%>'>Delete Zoo</button>
+  </div>
+  <br/>
+<button class = 'zooHome' >Your Zoos</button>
+
+<% include ../partials/footer %>

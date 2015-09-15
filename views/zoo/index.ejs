@@ -1,0 +1,26 @@
+<% include ../partials/header %>
+
+  <h2>Your Zoos</h2>
+
+  <button class = 'newZoo' >Add New Zoo</button>
+  <br/>
+  <% for (var i = 0; i < zoo.length; i++) { %>
+    <div class = 'zoos'>
+    Zoo Name: <br/>
+    <%= zoo[i].name %>
+    <br/>
+    Zoo Location: <br/>
+    <%= zoo[i].location %>
+    <br/>
+    Zoo Animals:
+    <%= zoo[i].animals %>
+    <br/>
+    <button class = 'viewZoo' data-url = "/zoos/<%= zoo[i].id %>" >View Zoo</button>
+    <br/>
+    <button class = 'editZoo' data-url = "/zoos/<%= zoo[i].id %>/edit" >Edit Zoo</button>
+    <br/>
+    <button class = 'deleteZoo' data-url = '/zoos/<%=zoo[i].id%>'>Delete Zoo</button>
+    </div>
+  <% } %>
+
+<% include ../partials/footer %>

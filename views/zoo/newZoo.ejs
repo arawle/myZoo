@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+
+<button class = 'zooHome'> Your Zoos </button>
+<br/>
+<div>
+  <form id='addZoo' action='/zoos' method='POST'>
+    Zoo Name: <br/>
+    <input type='text' name='name'/>
+    <br/>
+    Zoo Location: <br/>
+    <input type='text' name='location'/>
+    <br/>
+    <button type='submit' id='zooSubmit'>Add Zoo</button>
+  </form>
+</div>
+<br/>
+<button class = 'zooHome' >Your Zoos</button>
+
+<% include ../partials/footer %>
