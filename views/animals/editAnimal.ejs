@@ -1,2 +1,25 @@
 <% include ../partials/header %>
+
+<button class = 'zooHome'> Your Zoo </button>
+<br/>
+<div>
+  <form id='addAnimal' action='/zoos/<%=animal.zoo.id%>/animals/<%=animal._id%>?_method=put' method='POST'>
+    Animal Name:
+    <input type='text' name='animalName' value='<%= animal.animalName%>' />
+    <br/>
+    Animal Species:
+    <input type='text' name='species' value='<%= animal.species%>'/>
+    <br/>
+    Animal Age:
+    <input type='text' name='age' value='<%= animal.age%>'/>
+    <br/>
+    Animal Photo Url:
+    <input type='text' name='photo' value='<%= animal.photo%>'/>
+    <br/>
+    <button type='submit' id='submitAnimal'>Edit Animal</button>
+  </form>
+</div>
+<br/>
+<button class = 'zooHome' >Your Zoos</button>
+
 <% include ../partials/footer %>

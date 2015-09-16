@@ -6,14 +6,15 @@
   <br/>
   <% for (var i = 0; i < zoo.length; i++) { %>
     <div class = 'zoos'>
-    Zoo Name: <br/>
+    Zoo Name:
     <%= zoo[i].name %>
     <br/>
-    Zoo Location: <br/>
+    Zoo Location:
     <%= zoo[i].location %>
     <br/>
-    Zoo Animals:
-    <%= zoo[i].animals %>
+    Animals:
+    <button class = 'viewZoosAnimals' data-url = '/zoos/<%=zoo[i].id%>/animals'>Zoo Animals</button>
+    <br/>
     <br/>
     <button class = 'viewZoo' data-url = "/zoos/<%= zoo[i].id %>" >View Zoo</button>
     <br/>

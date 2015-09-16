@@ -1,6 +1,6 @@
 body {
   background-color: #FCEBCE;
-  color: #414141
+  color: #414141;
 }
 
 h2 {
@@ -36,4 +36,37 @@ img {
 .editImage {
   margin-left: 22px;
   border-radius: 10px;
+}
+
+.seperateFence {
+  width: 15px;
+  height: 325px;
+  background-image: url('/pictures/fenceHorizontal.jpg');
+  float: left;
+  border: none;
+  border-color: none;
+  border-radius: none;
+  padding: 0px;
+  text-align: center;
+  background-color: #9CA5B6;
+  margin: 0px;
+  overflow: auto;
+  padding-bottom: 0px;
+}
+
+.fence {
+  width: 100%;
+  height: 33px;
+  background-image: url('/pictures/fence.jpg');
+  clear: both;
+  float: left;
+  border: none;
+  border-color: none;
+  border-radius: none;
+  padding: 0px;
+  text-align: center;
+  background-color: #9CA5B6;
+  margin: 0px;
+  overflow: auto;
+  padding-bottom: 0px;
 }

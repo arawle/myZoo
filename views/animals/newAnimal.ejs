@@ -1,2 +1,27 @@
 <% include ../partials/header %>
+
+<h2>Add New Animal to <%=zoo.name%></h2>
+
+<button class = 'animalHome'> View Animals </button>
+<button class = 'thisZoo' data-url='/zoos/<%=zoo.id%>/edit'>Your Zoo</button>
+<br/>
+<div>
+  <form id='addAnimal' action='/zoos/<%=zoo.id%>/animals' method='POST'>
+    Animal Name:
+    <input type='text' name='animalName'/>
+    <br/>
+    Animal Species:
+    <input type='text' name='species'/>
+    <br/>
+    Animal Age:
+    <input type='text' name='age'/>
+    <br/>
+    Animal Photo Url:
+    <input type='text' name='photo'/>
+    <br/>
+    <button type='submit' id='animalSubmit'>Add Animal</button>
+  </form>
+</div>
+<br/>
+
 <% include ../partials/footer %>

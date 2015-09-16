@@ -1,16 +1,18 @@
 <% include ../partials/header %>
 
  <div class = 'zoos'>
-    Zoo Name: <br/>
+    Zoo Name:
     <%= zoo.name %>
     <br/>
-    Zoo Location: <br/>
+    Zoo Location:
     <%= zoo.location %>
     <br/>
     Zoo Animals:
-    <%= zoo.animals %>
+    <button class = 'viewZoosAnimals' data-url = '/zoos/<%=zoo.id%>/animals'>Zoo Animals</button>
     <br/>
     <br/>
+    <br/>
+    <button class = 'newAnimal' data-url = '/zoos/<%=zoo.id%>/animals/new'>New Animal</button>
     <button class = 'editZoo' data-url = "/zoos/<%= zoo.id %>/edit" >Edit Zoo</button>
     <br/>
     <button id = 'deleteButton' data-url = '/zoos/<%=zoo.id%>'>Delete Zoo</button>

@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var animalSchema = new mongoose.Schema({
-  name: String,
+  animalName: String,
   species: String,
   age: Number,
   photo: String,

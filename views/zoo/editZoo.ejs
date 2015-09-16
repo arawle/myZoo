@@ -3,12 +3,12 @@
 <button class = 'zooHome'> Your Zoos </button>
 <br/>
 <div>
-  <form id='addZoo' action='/zoos/<%=zoo._id%>?_method=put' method='POST'>
+  <form id='addZoo' action='/zoos/<%=zoo.id%>?_method=put' method='POST'>
     Zoo Name: <br/>
-    <input type='text' name='name' value='<%zoo.name%>'/>
+    <input type='text' name='name' value ='<%= zoo.name %>'/>
     <br/>
     Zoo Location: <br/>
-    <input type='text' name='location' value='<%zoo.location%>'/>
+    <input type='text' name='location' value ='<%=zoo.location%>'/>
     <br/>
     <button type='submit' id='submitZoo'>Edit Zoo</button>
   </form>

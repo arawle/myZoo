@@ -8,7 +8,7 @@ var zooSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Animal'
   }]
-})
+});
 
 zooSchema.pre('remove', function(callback) {
   Animal.remove({animal_id: this._id}).exec();
