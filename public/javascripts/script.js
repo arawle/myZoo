@@ -1,4 +1,13 @@
 $(function() {
+  $('.viewZoo').on('click', function (e) {
+    var dataUrl = $(this).data('url');
+    window.location.href = dataUrl;
+  });
+
+  $('.editZoo').on('click', function (e) {
+    var dataUrl = $(this).data('url');
+    window.location.href = dataUrl;
+  });
 
   $('.deleteZoo').on('click', function (e) {
     var dataUrl = $(this).data('url');
@@ -12,24 +21,14 @@ $(function() {
     });
   });
 
-  $('.viewZoo').on('click', function (e) {
-    var dataUrl = $(this).data('url');
-    window.location.href = dataUrl;
-  })
-
-  $('.editZoo').on('click', function (e) {
-    var dataUrl = $(this).data('url');
-    window.location.href = dataUrl;
-  });
-
   $('.zooHome').on('click', function (e) {
-    window.location.href = '/zoos'
+    window.location.href = '/zoos';
   });
 
   $('.thisZoo').on('click', function (e) {
     var dataUrl = $(this).data('url');
     window.location.href = dataUrl;
-  })
+  });
 
   $('.newZoo').on('click', function (e) {
     window.location.href = '/zoos/new';
@@ -38,12 +37,12 @@ $(function() {
   $('.newAnimal').on('click', function (e) {
     var dataUrl = $(this).data('url');
     window.location.href = dataUrl;
-  })
+  });
 
   $('.viewZoosAnimals').on('click', function (e) {
     var dataUrl = $(this).data('url');
     window.location.href = dataUrl;
-  })
+  });
 
   $('#deleteButton').on('click', function (e) {
     var dataUrl = $(this).data('url');
@@ -61,8 +60,7 @@ $(function() {
     window.location.href = dataUrl;
   });
 
-   $('.deleteAnimal').on('click', function (e) {
-    console.log('clicked')
+  $('.deleteAnimal').on('click', function (e) {
     var dataUrl = $(this).data('url');
     $.ajax({
       url: dataUrl,
@@ -73,6 +71,4 @@ $(function() {
       }
     });
   });
-
-
-})
+});

@@ -9,8 +9,7 @@ var animalSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Zoo'
   }
-
-})
+});
 
 var Animal = mongoose.model('Animal', animalSchema);
 

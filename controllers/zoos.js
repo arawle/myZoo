@@ -17,16 +17,15 @@ app.post('/zoos', function (req, res) {
 });
 
 app.get('/zoos/:id', function (req,res){
- db.Zoo.findById(req.params.id,
+  db.Zoo.findById(req.params.id,
   function (err, zoo){
-   db.Animal.find(
-   {
-     _id: {$in: zoo.animals}
-   },
-   function(err, animals){
+    db.Animal.find({
+      _id: {$in: zoo.animals}
+    },
+    function(err, animals){
      res.render('zoo/zooShow', { zoo: zoo, animals:animals});
-   });
- });
+    });
+  });
 });
 
 app.get('/zoos/:id/edit', function (req, res) {
@@ -40,7 +39,7 @@ app.put('/zoos/:id', function (req, res) {
     if (err) {
       res.render('zoos/edit');
     } else {
-      res.redirect('/zoos')
+      res.redirect('/zoos');
     }
   });
 });
@@ -50,23 +49,8 @@ app.delete('/zoos/:id', function (req, res) {
     if (err) {
       res.render('zoos/zooShow');
     } else {
+      zoo.remove();
       res.send('zoos');
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

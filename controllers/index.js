@@ -1,12 +1,12 @@
 var db = require('../models/index');
 
 app.get('/', function (req, res) {
-  res.redirect('/zoos')
-})
+  res.redirect('/zoos');
+});
 
 require('./animals');
-require('./zoos')
+require('./zoos');
 
 app.get('*', function (req, res) {
   res.render('errors/404');
-})
+});

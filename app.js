@@ -26,7 +26,6 @@ app.use(loginMiddleware);
 
 require('./controllers');
 
-// where to see my library
 app.listen(3000, function () {
   console.log("Go to localhost:3000/");
 });
